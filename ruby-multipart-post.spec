@@ -6,12 +6,12 @@
 %define pkgname multipart-post
 Summary:	Creates a multipart form post accessory for Net::HTTP
 Name:		ruby-%{pkgname}
-Version:	2.0.0
+Version:	2.4.1
 Release:	1
 License:	MIT
 Group:		Development/Languages
 Source0:	http://rubygems.org/gems/%{pkgname}-%{version}.gem
-# Source0-md5:	1be431f2e8b50cc5b63cc7b7e23fef44
+# Source0-md5:	190a88b4cae633a46b64c30764e5d624
 URL:		http://github.com/nicksieger/multipart-post
 BuildRequires:	rpm-rubyprov
 BuildRequires:	rpmbuild(macros) >= 1.665
@@ -71,17 +71,13 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc README.md
+%doc readme.md changelog.md
 %{ruby_vendorlibdir}/composite_io.rb
+%{ruby_vendorlibdir}/multipart/post.rb
+%{ruby_vendorlibdir}/multipart/post
 %{ruby_vendorlibdir}/multipart_post.rb
 %{ruby_vendorlibdir}/multipartable.rb
 %dir %{ruby_vendorlibdir}/net/http/post
 %{ruby_vendorlibdir}/net/http/post/multipart.rb
 %{ruby_vendorlibdir}/parts.rb
 %{ruby_specdir}/%{pkgname}-%{version}.gemspec
-
-%if %{with doc}
-%files doc
-%defattr(644,root,root,755)
-%doc Manifest.txt History.txt
-%endif
