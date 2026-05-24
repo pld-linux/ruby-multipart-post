@@ -7,7 +7,7 @@
 Summary:	Creates a multipart form post accessory for Net::HTTP
 Name:		ruby-%{pkgname}
 Version:	2.4.1
-Release:	1
+Release:	2
 License:	MIT
 Group:		Development/Languages
 Source0:	http://rubygems.org/gems/%{pkgname}-%{version}.gem
